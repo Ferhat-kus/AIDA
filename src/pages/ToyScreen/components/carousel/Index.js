@@ -5,10 +5,12 @@ export default class Index extends Component {
   render() {
     return (
       <View>
-        <Text>bitmek Üzere</Text>
+        <Text>Ferhat Kuş</Text>
       </View>
     )
   }
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  
+})

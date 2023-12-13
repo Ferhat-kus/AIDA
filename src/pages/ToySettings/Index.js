@@ -3,7 +3,8 @@ import {
     StyleSheet,
     View,
     ImageBackground,
-    Text
+    Text,
+    ScrollView
 } from 'react-native'
 import React, { Component } from 'react'
 //COMPONENTS
