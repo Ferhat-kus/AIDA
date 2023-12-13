@@ -5,7 +5,7 @@ export default class Index extends Component {
   render() {
     return (
       <View>
-        <Text>Index</Text>
+        <Text>bitmek Üzere</Text>
       </View>
     )
   }
