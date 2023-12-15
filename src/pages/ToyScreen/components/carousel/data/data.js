@@ -17,6 +17,6 @@ export default  [
     {
         "_id":"4",
         "name":"Slide4",
-        "toys":require('../../../../../assets/ToyImage/toysAdd.png'),
+        "toysAdd":require('../../../../../assets/ToyImage/toysAdd.png'),
     },
 ]

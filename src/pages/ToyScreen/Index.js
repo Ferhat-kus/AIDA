@@ -18,7 +18,7 @@ export default class Index extends Component {
                 <Carousel/>       
                 </View>
                 <View style={styles.whiteBackground}>
-                <View style={{width:'100%',height:1,backgroundColor:'grey',marginTop:40,}}/>
+                <View style={{width:'100%',height:1,backgroundColor:'grey',}}/>
                 <PackageIncluded Title='Çocuk Adı:' price=' Hayati ali KELEŞ'/>
                 <PackageIncluded Title='Yaş:' price=' 11'/>
                 <View style={{alignItems:'center',justifyContent:'center',}}>
@@ -51,14 +51,10 @@ const styles = StyleSheet.create({
     },
     carousel:{
         zIndex:1,
-        top:160,
+        top:150,
         position:'absolute',
         width:'100%',
         height:'50%',
-        opacity:0.5,
-        flex: 1,
-        backgroundColor: '#f0f0f0',
-        backgroundColor:'yellow',
         alignItems:'center', 
     },
 });
