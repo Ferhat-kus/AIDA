@@ -83,7 +83,6 @@ export default class Flatlist extends Component {
             opacity: this.state.opacityValues[index],
             transform: [{ scale: this.state.scaleValues[index] }],
         };
-
         return (
             <TouchableOpacity style={styles.TouchableContainer} onPress={() => this.handleItemPress(index)}>
                 <Animated.View style={[styles.sliderContainer, animatedStyle]}>

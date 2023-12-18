@@ -54,7 +54,7 @@ export default class Index extends Component {
           )}
           onSnapToItem={(index) => this.setState({ activeSlide: index })}
           firstItem={1}
-          loop={false}
+          loop={true}
           inactiveSlideScale={0.75}
           inactiveSlideOpacity={0.75}
           sliderWidth={400}
