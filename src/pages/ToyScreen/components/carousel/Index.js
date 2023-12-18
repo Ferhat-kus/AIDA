@@ -4,18 +4,22 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 import Data from './data/data';
 
 export default class Index extends Component {
+  // Carousel bileşenine referans oluşturuluyor
   carouselRef = React.createRef();
 
+  // Aktif slaydın indeksini tutan state
   state = {
-    activeSlide: 0,
+    activeSlide: 1,
   };
 
+  // Sonraki slayda geçişi sağlayan fonksiyon
   handleNextPress = () => {
     if (this.carouselRef.current) {
       this.carouselRef.current.snapToNext();
     }
   };
 
+  // Önceki slayda geçişi sağlayan fonksiyon
   handlePrevPress = () => {
     if (this.carouselRef.current) {
       this.carouselRef.current.snapToPrev();
@@ -25,6 +29,7 @@ export default class Index extends Component {
   render() {
     return (
       <View style={styles.container}>
+        {/* Carousel Bileşeni */}
         <Carousel
           ref={this.carouselRef}
           containerCustomStyle={{ overflow: 'visible' }}
@@ -35,12 +40,14 @@ export default class Index extends Component {
                 width: 250,
                 height: 350,
                 alignItems: 'center',
-                justifyContent:'center',
+                justifyContent: 'center',
               }}>
-              {item.toys && <Image style={{width:250,height:330,}} source={item.toys} />}
+              {/* Eğer "toys" varsa, görüntüyü göster */}
+              {item.toys && <Image style={{ width: 250, height: 330 }} source={item.toys} />}
+              {/* Eğer "toysAdd" varsa, dokunmatik opsiyonuyla göster */}
               {item.toysAdd && (
                 <TouchableOpacity>
-                  <Image  source={item.toysAdd} />
+                  <Image source={item.toysAdd} />
                 </TouchableOpacity>
               )}
             </View>
@@ -54,20 +61,21 @@ export default class Index extends Component {
           itemWidth={260}
           slideStyle={{ display: 'flex', alignItems: 'center' }}
         />
-        <View style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-          <Text style={{
-            fontSize:30,
-            fontFamily:'Roboto-Bold',
-          }}>AIDA</Text>
-          <Text style={{fontSize:15,fontFamily:'Roboto-Regular',}}>Merhaba ben Aida, size nasıl yardımcı olabilirim?</Text>
+
+        {/* Başlangıç Ekranı */}
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={{ fontSize: 30, fontFamily: 'Roboto-Bold' }}>AIDA</Text>
+          <Text style={{ fontSize: 15, fontFamily: 'Roboto-Regular' }}>Merhaba ben Aida, size nasıl yardımcı olabilirim?</Text>
         </View>
+
+        {/* Önceki ve Sonraki Düğmeleri */}
         <View style={styles.DotsContainer}>
+          {/* Önceki düğmesi */}
           <TouchableOpacity onPress={this.handlePrevPress}>
             <Image source={require('../../../../assets/ToyImage/previous.png')} />
           </TouchableOpacity>
+          
+          {/* Sayfalama Noktaları */}
           <Pagination
             dotsLength={Data.length - 1}
             activeDotIndex={this.state.activeSlide}
@@ -82,6 +90,8 @@ export default class Index extends Component {
             inactiveDotOpacity={0.4}
             inactiveDotScale={0.6}
           />
+          
+          {/* Sonraki düğmesi */}
           <TouchableOpacity onPress={this.handleNextPress}>
             <Image source={require('../../../../assets/ToyImage/next.png')} />
           </TouchableOpacity>
