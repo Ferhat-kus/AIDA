@@ -61,7 +61,6 @@ export default class Index extends Component {
           itemWidth={260}
           slideStyle={{ display: 'flex', alignItems: 'center' }}
         />
-
         {/* Başlangıç Ekranı */}
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
           <Text style={{ fontSize: 30, fontFamily: 'Roboto-Bold' }}>AIDA</Text>
