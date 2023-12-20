@@ -8,22 +8,22 @@ import Button from './components/Button'
 
 export default class Index extends Component {
     render() {
-        const {navigation} = this.props;
+        const { navigation } = this.props;
         return (
             <ImageBackground style={styles.container} source={require('../../assets/background.png')}>
                 <View style={styles.navbarContainer}>
-                    <Navbar onPress={() => navigation.navigate('UserLangues')}/>
+                    <Navbar onPress={() => navigation.navigate('UserLangues')} />
                 </View>
                 <View style={styles.carousel}>
-                <Carousel/>       
+                    <Carousel />
                 </View>
                 <View style={styles.whiteBackground}>
-                <View style={{width:'100%',height:1,backgroundColor:'grey',}}/>
-                <PackageIncluded Title='Çocuk Adı:' price=' Hayati ali KELEŞ'/>
-                <PackageIncluded Title='Yaş:' price=' 11'/>
-                <View style={{alignItems:'center',justifyContent:'center',}}>
-                    <Button/>
-                </View>
+                    <View style={{ width: '100%', height: 1, backgroundColor: 'grey', }} />
+                    <PackageIncluded Title='Çocuk Adı:' price=' Hayati ali KELEŞ' />
+                    <PackageIncluded Title='Yaş:' price=' 11' />
+                    <View style={{ alignItems: 'center', justifyContent: 'center', }}>
+                        <Button />
+                    </View>
                 </View>
             </ImageBackground>
         );
@@ -47,14 +47,14 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 50,
         backgroundColor: 'white',
         paddingHorizontal: 20,
-        justifyContent:'center',
+        justifyContent: 'center',
     },
-    carousel:{
-        zIndex:1,
-        top:150,
-        position:'absolute',
-        width:'100%',
-        height:'50%',
-        alignItems:'center', 
+    carousel: {
+        zIndex: 1,
+        top: 150,
+        position: 'absolute',
+        width: '100%',
+        height: '50%',
+        alignItems: 'center',
     },
 });

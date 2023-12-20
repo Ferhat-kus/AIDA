@@ -4,7 +4,6 @@ import {
     View,
     ImageBackground,
     Text,
-    ScrollView
 } from 'react-native'
 import React, { Component } from 'react'
 //COMPONENTS

@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     navbarContainer: {
-        flex: 1,
+        flex: 0.8,
         alignItems: 'center',
         justifyContent: 'center',
     },

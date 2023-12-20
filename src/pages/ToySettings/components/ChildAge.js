@@ -11,7 +11,7 @@ export default class ChildAge extends Component {
         })
     }
     onPressNegative = () => {
-        if (this.state.Age > 0) {
+        if (this.state.Age > 1) {
             this.setState({ 
                 Age: --this.state.Age,
             })

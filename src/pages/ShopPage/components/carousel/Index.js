@@ -12,8 +12,7 @@ export default class Flatlist extends Component {
         return (
             <TouchableOpacity
                 style={[styles.borderContainer, { opacity: isSelected ? 1 : 0.5 }]}
-                onPress={() => this.setState({ selectedIndex: index })}
-            >
+                onPress={() => this.setState({ selectedIndex: index })}>
                 <View style={styles.sliderContainer}>
                     <Image source={item.token} />
                     <View style={styles.nameborder}>
@@ -23,13 +22,11 @@ export default class Flatlist extends Component {
             </TouchableOpacity>
         );
     };
-
     render() {
         return (
             <View style={styles.Container}>
                 <FlatList
-                    horizontal
-                    
+                    horizontal       
                     renderItem={this.renderContentItem}
                     data={Data}
                     showsHorizontalScrollIndicator={false}
